@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 80vw;
+    display: grid;
+    place-items: center;
+    position: relative;
+
+    &>#app {
+        width: 72rem;
+        margin-top: 4rem;
+        margin-left: 10rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: -1.5rem;
+
+        &>#nav {
+            grid-template-columns: 1fr;
+
+            &> :nth-child(1) {
+                position: absolute;
+                padding-left: 6rem;
+                padding-top: 6rem;
+            }
+
+            &> :nth-child(2) {
+                position: relative;
+                padding-top: 10.5rem;
+                font-size: 2rem;
+                font-family: 'Inter', sans-serif;
+            }
+
+            #foter {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center; 
+                gap: .4rem; 
+            }
+            
+            #foter > :nth-child(1) {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                font-weight: bold; 
+            }
+            
+            #foter > :nth-child(2) {
+                font-size: 0.8rem;
+                font-family: 'Inter', sans-serif;
+                font-weight: 300;
+            }
+            
+        }
+
+        #imags {
+            height: 36rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            position: relative;
+        }
+
+        #imags> :nth-child(1),
+        #imags> :nth-child(2) {
+            position: absolute;
+        }
+
+        #imags> :nth-child(1) {
+            height: 31.2rem;
+            width: 32rem;
+            top: 0;
+        }
+
+        #imags> :nth-child(2) {
+            height: 28.6rem;
+            width: 27.9rem;
+            border-radius: 1%;
+            padding-left: 1.75rem;
+            padding-top: 3rem;
+            z-index: 1;
+        }
+
+
+    }
+
+    &>#btm {
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 7rem;
+    }
+}
